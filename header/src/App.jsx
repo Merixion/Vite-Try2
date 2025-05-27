@@ -1,11 +1,10 @@
-import Header from './Header'
-import './App.css'
+import Welcome from "./Welcome"
 
 function App() {
 
   return (
     <>
-    <Header/>
+    <Welcome/>
     </>
   )
 }
