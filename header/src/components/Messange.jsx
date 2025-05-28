@@ -1,7 +1,7 @@
-function Messange({text}){
+function Message({text}){
   return(
     <p>{text}</p>
   );
 }
 
-export default Messange
+export default Message

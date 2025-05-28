@@ -7,6 +7,7 @@
 
 body {
   font-family: sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background: linear-gradient(165deg, #35044a, #4a0409);
+  color: #fff;
+  min-height: 100vh;
 }
