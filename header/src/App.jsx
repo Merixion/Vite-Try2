@@ -1,23 +1,25 @@
-import Welcome from "./components/Welcome/Welcome"
-import Button from "./components/Button/Button"
-import { useState } from "react"
+import Welcome from './components/Welcome/Welcome';
+import Button from './components/Button/Button';
+import { useState } from 'react';
+import Messange from './components/Messange';
 function App() {
-    const [text, settext] = useState('sss');
-    const [text2, settext2] = useState('ффф');
-    const [text3, settext3] = useState('ввв');
-    function textRedactor(){
-      settext('HAi');
-    }
-    
-    function textRedactor1() {
-			settext2('Hei');
-		}
+  const messanges = ['Привет', "как дела?", "Пока"]
+	const [text, settext] = useState('sss');
+	const [text2, settext2] = useState('ффф');
+	const [text3, settext3] = useState('ввв');
+	function textRedactor() {
+		settext('HAi');
+	}
 
-    function textRedactor2() {
-			settext3('GAi');
-		}
+	function textRedactor1() {
+		settext2('Hei');
+	}
 
-  return (
+	function textRedactor2() {
+		settext3('GAi');
+	}
+
+	return (
 		<>
 			<Welcome />
 			<Button kind='default' onClick={textRedactor}>
@@ -32,8 +34,12 @@ function App() {
 			<Button kind='danger' onClick={textRedactor2}>
 				{text3}
 			</Button>
+      {messanges.map((msg, key) =>(
+        <Messange key = {msg} index = {key}/>
+      ))}
+      );
 		</>
 	);
 }
 
-export default App
+export default App;
